@@ -1,0 +1,10 @@
+{
+  "name": "com.joeyy.managerframework",
+  "version": "1.0.0",
+  "displayName": "Manager Framework - Manager System",
+  "description": "A reusable manager and locator system for Unity projects.",
+  "unity": "2020.3",
+  "author": {
+    "name": "Joey Iglesias"
+  }
+}

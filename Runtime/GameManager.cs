@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     // Establish the singleton pattern and DDOL.
-    private void Awake()
+    protected virtual void Awake()
     {
         // If the instance is set, this is a duplicate, BAIL!
         if (Instance != null)

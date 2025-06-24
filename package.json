@@ -1,6 +1,6 @@
 {
   "name": "com.joeyy.managerframework",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "displayName": "Manager Framework - Manager System",
   "description": "A reusable manager and locator system for Unity projects.",
   "unity": "2020.3",

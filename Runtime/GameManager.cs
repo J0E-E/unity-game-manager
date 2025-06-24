@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public abstract class GameManager : MonoBehaviour
 {
     // GameManager Instance
     public static GameManager Instance;
@@ -22,11 +22,21 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         
         // Register THIS manager. Duh!
-        ManagerLocator.Register<GameManager>(this);
+        RegisterSelf();
 
         // Register all the other managers. 
         RegisterManagers();
     }
+
+    /// <summary>
+    /// Abstract method intended to register the current manager instance with the application.
+    /// Concrete implementations of this method should handle the specific registration logic for an inheriting
+    /// manager class. This is typically used to ensure the manager is properly accessible via a manager locator
+    /// or similar service management structure.
+    ///
+    /// <para>Register via: <c>ManagerLocator.Register&lt;GameManager&gt;(this);</c></para>
+    /// </summary>
+    protected abstract void RegisterSelf();
 
     private void RegisterManagers()
     {
